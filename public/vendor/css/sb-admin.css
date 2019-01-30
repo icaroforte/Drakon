@@ -373,3 +373,72 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+.cadastro-header{
+    background-color: #394046;
+    background-image: linear-gradient(to bottom, #394046, #67747e 130%);
+    color: white;
+    height: 70px;
+    border-radius: 1px;
+    padding-top: 17px;
+    font-size: 28px;
+    font-weight: 100;
+}
+.cadastro-header-image{
+  width:30px;
+  height:40px;
+}
+.cadastro-label{
+  text-align: left;
+  margin-left: 65px;
+}
+.cadastro-label-padding{
+  margin-top:-15px;
+}
+.cadastro-field{
+  margin-top: -5px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.cadastro-border{
+  border-width: 1px;
+  border-color: #454d54;
+}
+.cadastro-button{
+  margin-top: 13px;
+}
+.cadastro-radio{
+  margin-left: 35px;
+  margin-bottom: 5px;
+}
+.cadastro-select{
+  margin-top: -64px;
+  margin-left: 0px;
+  width: 25%;
+}
+.cadastro-quantidade{
+  margin-left:-350px;
+  width: 25%;
+}
+.cadastro-date{
+  width: 25%;
+  margin-left:-382px;
+}
+.bootstrap-select ul.dropdown-menu li:first-child {
+    display: none;
+}
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    display:none;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 46px;
+  }
+.pesquisa-field-index{
+  margin-left: 19px;
+}

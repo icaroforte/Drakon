@@ -34,6 +34,11 @@ var app = angular.module('appRoutes',['ngRoute'])
     autenticado: true
   })
 
+  .when('/cadastroentorpecente',{
+    templateUrl:'partials/cadastroentorpecente.html',
+    autenticado: true
+  })
+
   .otherwise({redirectTo: '/'});
 });
 
@@ -54,6 +59,6 @@ app.run(['$rootScope', 'Autenticar','$location',function($rootScope, Autenticar,
         $location.path('/profile');
       }
     }
-    
+
   });
 }]);
