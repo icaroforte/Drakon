@@ -18,7 +18,7 @@
 
   </head>
 
-  <body ng-app = "userApp">
+  <body ng-app = "userApp" ng-controller = "mainCtrl as main" ng-show="main.loadme" ng-cloak>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -37,8 +37,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#!/register">Register</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" ng-show = "!main.isLoggedIn">
             <a class="nav-link" href="#!/login">Login</a>
+          </li>
+          <li class="nav-item" ng-show = "main.isLoggedIn">
+            <a class="nav-link"  href="#!/logout" ng-click="main.logout();">Logout</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -47,6 +50,9 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/profile">Bem vindo {{main.username}}</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -73,7 +79,7 @@
 
         <hr>
 <!-- Main controller estará disponível em todas as views por estar explicitamente atrelado ao index.html -->
-        <div ng-view ng-controller = "mainCtrl as main"></div>
+        <div ng-view></div>
       </div> <!-- /container -->
 
     </main>

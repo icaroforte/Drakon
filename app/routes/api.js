@@ -1,12 +1,11 @@
 //Deveria tá sendo usado no controller
 var User = require('../models/user');
+var jwt = require('jsonwebtoken');
+//Secret a titulo de teste da aplicação
+var secret = 'algaroba';
 
 //rotas
 module.exports = function(router) {
-
-  router.get('/home',function(req,res){
-    res.send('Home');
-  });
 
   router.get('/users',function(req,res){
     User.find({}, function(err, data) {
@@ -38,12 +37,6 @@ module.exports = function(router) {
     //console.log('salvando contato');
   });
 
-
-  //testando rota simples
-  router.get('/', function(req,res){
-    res.send('Testando rota');
-  });
-
   //autenticar
   //http://localhost:port/api/autenticar
   router.post('/autenticar', function(req,res){
@@ -61,10 +54,34 @@ module.exports = function(router) {
          if(!validarPassword){
            res.json({success:false, message:'Senha incorreta'});
          }else{
-           res.json({success:true, message:'Usuário autenticado'});
+           var token = jwt.sign({username: user.username, email: user.email}, secret,{expiresIn:'24h'});
+           res.json({success:true, message:'Usuário autenticado', token: token});
          }
       }
     });
+  });
+
+  router.use(function(req, res, next){
+
+    var token = req.body.token || req.body.query || req.headers['x-acess-token'];
+
+    if(token){
+      //verifica token
+      jwt.verify(token, secret, function(err, decoded){
+        if(err){
+          res.json({success:false, message:'Token inválido'});
+        }else{
+          req.decoded = decoded;
+          next();
+        }
+      });
+    }else{
+      res.json({success:false, message:'Nenhum token passado como parâmetro'});
+    }
+  });
+
+  router.post('/me', function(req,res){
+    res.send(req.decoded);
   });
 
   return router;
