@@ -5,7 +5,10 @@ var app = angular.module('appRoutes',['ngRoute'])
   $routeProvider
 
   .when('/',{
-    templateUrl:'partials/home.html'
+    templateUrl:'partials/home.html',
+    controller:'entorpecenteCtrl',
+    controllerAs:'entorpecente',
+    autenticado: true
   })
 
   .when('/about',{
@@ -36,6 +39,8 @@ var app = angular.module('appRoutes',['ngRoute'])
 
   .when('/cadastroentorpecente',{
     templateUrl:'partials/cadastroentorpecente.html',
+    controller:'entorpecenteCtrl',
+    controllerAs:'entorpecente',
     autenticado: true
   })
 
