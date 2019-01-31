@@ -1,10 +1,12 @@
 //Deveria tá sendo usado no controller
 var User = require('../models/user');
+var Entorpecente = require('../models/entorpecente');
 var jwt = require('jsonwebtoken');
 //Secret a titulo de teste da aplicação
 var secret = 'algaroba';
 
-//rotas
+//ROTAS
+//################################## API Usuários ####################################\\
 module.exports = function(router) {
 
   router.get('/users',function(req,res){
@@ -61,6 +63,85 @@ module.exports = function(router) {
     });
   });
 
+
+//################################## API Entorpecentes ####################################\\
+
+//busca lista de Entorpecentes
+//http://localhost:port/api/entorpecentes
+router.get('/entorpecentes', function(req, res) {
+  Entorpecente.find({}, function(err, data) {
+    console.log('aqui lista');
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+//busca Entorpecente por ID
+//http://localhost:port/api/entorpecente/:id
+    router.get('/entorpecente/:id', function(req, res) {
+    var query = { _id: req.params.id };
+    console.log(query);
+    Entorpecente.findOne(query, function(err, data) {
+      if (err || data == null) {
+        res.sendStatus(404);
+      } else {
+        res.json(data);
+      }
+    });
+  });
+
+//cadastro de Entorpecente
+//http://localhost:port/api/entorpecente
+  router.post('/entorpecente',function(req,res){
+    var entorpecente = new Entorpecente(req.body);
+
+    	entorpecente.save(function(err, data) {
+
+    		console.log(data);
+
+    		if (err) {
+    			res.status(400).json(err);
+    		} else {
+    			res.status(201).json(data);
+    		}
+    	});
+  });
+
+//editando entorpecente
+//http://localhost:port/api/entorpecente/:id
+  router.put('/entorpecente/:id', function(req, res) {
+  	var query = { _id: req.params.id };
+  	var mod = req.body;
+  	delete mod._id;
+
+  	Entorpecente.update(query, mod, function(err, data) {
+  		if (err) {
+  			res.status(400).json(err);
+  		} else {
+  			res.json(data);
+  		}
+  	});
+  });
+
+//deletando entorpecente
+//http://localhost:port/api/entorpecente/:id
+  router.delete('/entorpecente/:id', function(req, res) {
+	var query = { _id: req.params.id };
+
+	Entorpecente.deleteOne(query, function(err, data) {
+		if (err) {
+			res.status(400).json(err);
+		} else {
+			res.json(data);
+		}
+	});
+});
+
+
+//################################## API Token ####################################\\
   router.use(function(req, res, next){
 
     var token = req.body.token || req.body.query || req.headers['x-acess-token'];

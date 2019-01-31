@@ -16,7 +16,13 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
+
 //http://localhost:8080/api/users
+//http://localhost:8080/api/autenticar
+//http://localhost:8080/api/me
+//http://localhost:8080/api/entorpecentes
+//http://localhost:8080/api/entorpecente
+
 //colocar '/api' é uma maneira de diferenciar rotas do backend e frontend
 app.use('/api', appRoutes);
 
