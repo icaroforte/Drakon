@@ -50,7 +50,19 @@ var EntorpecenteSchema = new Schema({
   	},
   	delegacia:{
   		type: String,
-  	}
+  	},
+    autorizacao:{
+      type: String,
+    },
+    data_apreensao:{
+      type: String,
+    },
+    local_apreensao:{
+      type: String,
+    },
+    incinerado:{
+      type: String,
+    }
 });
 
 module.exports = mongoose.model('Entorpecente', EntorpecenteSchema);
