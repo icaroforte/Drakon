@@ -2,48 +2,54 @@
   <div class="card-body">
     <div class="table-responsive">
 
-<table id="example" class="table table-bordered table-striped display" style="width:100%">
+<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%">
     <thead>
         <tr>
             <!-- <th class="d-none">Usuário</th> omite a coluna usuário-->
+        <th>Delegacia</th>
         <th>Proced.</th>
         <th>Num. Proced.</th>
-        <th>Data</th>
-        <th>Investigado(a)</th>
+        <th>Laudo</th>
+        <th>Lacre</th>
+        <th>Caixa</th>
         <th>Substância</th>
         <th>Qtd.</th>
         <th>Und.</th>
-        <th>Laudo</th>
+        <th>Data</th>
+        <th>Investigado(a)</th>
+        <th>Local Apreen.</th>
+        <th>Data Apreen.</th>
         <th>Vara</th>
         <th>N° Processo</th>
-        <th>Lacre</th>
-        <th>Data Autorização</th>
-        <th>Caixa</th>
-        <th>Ofício</th>
-        <th>Delegacia</th>
         <th>Autorizado</th>
+        <th>Data Autorização</th>
+        <th>Ofício</th>
         <th>Incinerado</th>
-        <th>Data Apreen.</th>
-        <th>Local Apreen.</th>
         </tr>
     </thead>
+
     <tbody>
         <tr ng-repeat="entorpecente in entorpecente.entorpecentes">
+          <td> {{entorpecente.delegacia}}</td>
           <td> {{entorpecente.procedimento}}</td>
           <td> {{entorpecente.n_proced}}</td>
-          <td> {{entorpecente.data_entrada}}</td>
-          <td> {{entorpecente.investigado}}</td>
+          <td> {{entorpecente.laudo}}</td>
+          <td> {{entorpecente.lacre}}</td>
+          <td> {{entorpecente.caixa}}</td>
           <td> {{entorpecente.substancia}}</td>
           <td> {{entorpecente.quant}}</td>
           <td> {{entorpecente.und}}</td>
-          <td> {{entorpecente.laudo}}</td>
+          <td> {{entorpecente.data_entrada}}</td>
+          <td> {{entorpecente.investigado}}</td>
+          <td> {{entorpecente.local_apreensao}}</td>
+          <td> {{entorpecente.data_apreensao}}</td>
           <td> {{entorpecente.vara}}</td>
           <td> {{entorpecente.n_processo}}</td>
-          <td> {{entorpecente.lacre}}</td>
+          <td> {{entorpecente.autorizacao}}</td>
           <td> {{entorpecente.data_autorizacao}}</td>
-          <td> {{entorpecente.caixa}}</td>
           <td> {{entorpecente.oficio}}</td>
-          <td> {{entorpecente.delegacia}}</td>
+          <td> {{entorpecente.incinerado}}</td>
+
         </tr>
     </tbody>
 </table>
