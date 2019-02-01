@@ -54,6 +54,19 @@ app.run(['$rootScope', 'Autenticar','$location',function($rootScope, Autenticar,
 
   $rootScope.$on('$routeChangeStart', function(event, next, current){
 
+
+    if(Autenticar.isLoggedIn()){
+      if(next.$$route.autenticado == false){
+        event.preventDefault();
+        $location.path('/');
+      }
+    }else{
+      if(next.$$route.autenticado == true){
+        event.preventDefault();
+        $location.path('/about');
+      }
+    }
+    /*
     if(next.$$route.autenticado == true){
       if (!Autenticar.isLoggedIn()){
         event.preventDefault();
@@ -65,6 +78,6 @@ app.run(['$rootScope', 'Autenticar','$location',function($rootScope, Autenticar,
         $location.path('/about');
       }
     }
-
+*/
   });
 }]);
