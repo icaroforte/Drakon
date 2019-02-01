@@ -1,59 +1,49 @@
 <div class="card mb-3">
   <div class="card-body">
     <div class="table-responsive">
-
-<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%">
-    <thead>
-        <tr>
-            <!-- <th class="d-none">Usuário</th> omite a coluna usuário-->
-        <th>Delegacia</th>
-        <th>Proced.</th>
-        <th>Num. Proced.</th>
-        <th>Laudo</th>
-        <th>Lacre</th>
-        <th>Caixa</th>
-        <th>Substância</th>
-        <th>Qtd.</th>
-        <th>Und.</th>
-        <th>Data</th>
-        <th>Investigado(a)</th>
-        <th>Local Apreen.</th>
-        <th>Data Apreen.</th>
-        <th>Vara</th>
-        <th>N° Processo</th>
-        <th>Autorizado</th>
-        <th>Data Autorização</th>
-        <th>Ofício</th>
-        <th>Incinerado</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr ng-repeat="entorpecente in entorpecente.entorpecentes">
-          <td> {{entorpecente.delegacia}}</td>
-          <td> {{entorpecente.procedimento}}</td>
-          <td> {{entorpecente.n_proced}}</td>
-          <td> {{entorpecente.laudo}}</td>
-          <td> {{entorpecente.lacre}}</td>
-          <td> {{entorpecente.caixa}}</td>
-          <td> {{entorpecente.substancia}}</td>
-          <td> {{entorpecente.quant}}</td>
-          <td> {{entorpecente.und}}</td>
-          <td> {{entorpecente.data_entrada}}</td>
-          <td> {{entorpecente.investigado}}</td>
-          <td> {{entorpecente.local_apreensao}}</td>
-          <td> {{entorpecente.data_apreensao}}</td>
-          <td> {{entorpecente.vara}}</td>
-          <td> {{entorpecente.n_processo}}</td>
-          <td> {{entorpecente.autorizacao}}</td>
-          <td> {{entorpecente.data_autorizacao}}</td>
-          <td> {{entorpecente.oficio}}</td>
-          <td> {{entorpecente.incinerado}}</td>
-
-        </tr>
-    </tbody>
-</table>
-
+      <div class="row">
 </div>
-</div>
-</div>
+
+<!--<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%"> -->
+
+  <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true">
+    <tr ng-repeat="user in $data">
+      <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
+          {{user.delegacia}}</td>
+      <td title="'Proced'" filter="{ procedimento: 'text'}" sortable="'procedimento'">
+          {{user.procedimento}}</td>
+      <td title="'Num. Proced.'" filter="{ n_proced: 'text'}" sortable="'n_proced'">
+        {{user.n_proced}}</td>
+      <td title="'Laudo'" filter="{ laudo: 'text'}" sortable="'laudo'">
+        {{user.laudo}}</td>
+      <td title="'Lacre'" filter="{ lacre: 'text'}" sortable="'lacre'">
+        {{user.lacre}}</td>
+      <td title="'Substância'" filter="{ substancia: 'text'}" sortable="'substancia'">
+        {{user.substancia}}</td>
+      <td title="'Qtd'" filter="{ quant: 'number'}" sortable="'quant'">
+        {{user.quant}}</td>
+      <td title="'Und'" filter="{ und: 'text'}" sortable="'und'">
+        {{user.und}}</td>
+      <td title="'Data'" filter="{ data_entrada: 'text'}" sortable="'data_entrada'">
+        {{user.data_entrada}}</td>
+      <td title="'Investigado'" filter="{ investigado: 'text'}" sortable="'investigado'">
+        {{user.investigado}}</td>
+      <td title="'Local Apreen'" filter="{ local_apreensao: 'text'}" sortable="'local_apreensao'">
+        {{user.local_apreensao}}</td>
+      <td title="'Data Apreen'" filter="{ data_apreensao: 'text'}" sortable="'data_apreensao'">
+        {{user.data_apreensao}}</td>
+      <td title="'Vara'" filter="{ vara: 'text'}" sortable="'vara'">
+        {{user.vara}}</td>
+      <td title="'N° Processo'" filter="{ n_processo: 'text'}" sortable="'n_processo'">
+        {{user.n_processo}}</td>
+      <td title="'Autorizado'" filter="{ autorizacao: 'text'}" sortable="'autorizacao'">
+        {{user.autorizacao}}</td>
+      <td title="'Data Autorização'" filter="{ data_autorizacao: 'text'}" sortable="'data_autorizacao'">
+        {{user.data_autorizacao}}</td>
+      <td title="'Ofício'" filter="{ oficio: 'text'}" sortable="'oficio'">
+        {{user.oficio}}</td>
+      <td title="'Incinerado'" filter="{ incinerado: 'text'}" sortable="'incinerado'">
+        {{user.incinerado}}</td>
+
+    </tr>
+  </table>

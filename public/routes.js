@@ -12,7 +12,9 @@ var app = angular.module('appRoutes',['ngRoute'])
   })
 
   .when('/about',{
-    templateUrl:'partials/about.html'
+    templateUrl:'partials/about.html',
+    controller:'entorpecenteCtrl',
+    controllerAs:'entorpecente'
   })
 
   .when('/register',{

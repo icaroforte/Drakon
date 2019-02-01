@@ -7,7 +7,6 @@ angular.module('entorpecenteServices',[])
   }
 
   entorpecenteFactory.getEntorpecentes = function(){
-    console.log('entorpecentes lista');
     return $http.get('/api/entorpecentes');
   };
 

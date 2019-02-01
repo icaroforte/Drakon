@@ -1,8 +1,10 @@
-angular.module('entorpecenteController',['entorpecenteServices'])
+angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
-.controller('entorpecenteCtrl', function($http, $location, $timeout, Entorpecente){
+.controller('entorpecenteCtrl', function($http, $location, $timeout, Entorpecente, NgTableParams){
 
     var app = this;
+
+
 
     app.registerEntorpecente = function(entorpecentedata){
 
@@ -25,15 +27,21 @@ angular.module('entorpecenteController',['entorpecenteServices'])
 
   app.entorpecentes = [];
 
+  var data = [];
+
   let buscaEntorpecentes = () =>{
 
     Entorpecente.getEntorpecentes()
     .then(function(data){
       app.entorpecentes = data.data;
+      data = data.data;
+
+      app.tableParams = new NgTableParams({}, { dataset: data});
     });
 
   }
 
- buscaEntorpecentes();
+buscaEntorpecentes();
+
 
 });
