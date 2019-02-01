@@ -1,6 +1,6 @@
 angular.module('mainController', ['autenticarServices'])
 
-.controller('mainCtrl', function(Autenticar, $timeout, $location, $rootScope){
+.controller('mainCtrl', function(Autenticar, $timeout, $location, $rootScope, $window){
 
     var app = this;
 
@@ -54,7 +54,7 @@ angular.module('mainController', ['autenticarServices'])
     Autenticar.logout();
     $location.path('/logout');
     $timeout(function(){
-      $location.path('/about');
+      $window.location.href = '/about';
     }, 2000);
   };
 
