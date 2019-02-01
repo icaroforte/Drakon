@@ -6,7 +6,7 @@ angular.module('mainController', ['autenticarServices'])
 
     //serve para que primeiro se carregue todo a HTML, para depois exibir o angular
     app.loadme = false;
-    
+
     $rootScope.$on('$routeChangeStart',function(){
       if(Autenticar.isLoggedIn()){
         console.log('USUÁRIO LOGADO COM SUCESSO');
@@ -21,6 +21,7 @@ angular.module('mainController', ['autenticarServices'])
         app.isLoggedIn = false;
         app.username = '';
         app.loadme = true;
+
       }
     });
 
@@ -53,7 +54,7 @@ angular.module('mainController', ['autenticarServices'])
     Autenticar.logout();
     $location.path('/logout');
     $timeout(function(){
-      $location.path('/login');
+      $location.path('/about');
     }, 2000);
   };
 

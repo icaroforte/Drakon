@@ -32,9 +32,12 @@
 
   </head>
 
+
     <body id="page-top" ng-app = "userApp" ng-controller = "mainCtrl as main" ng-show="main.loadme" ng-cloak>
 
-      <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+      <!--<div ng-show = "main.isLoggedIn"> -->
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark static-top" ng-show = "main.isLoggedIn">
 
         <a class="navbar-brand mr-1" href="#"> <img src="/vendor/images/Black_dragon.png" style="width:35px;height:45px;"> Drakon</a>
 
@@ -55,7 +58,7 @@
               <span>{{main.username}}</span></a>
           </li>
           <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -71,24 +74,24 @@
       <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="sidebar navbar-nav">
+        <ul class="sidebar navbar-nav" ng-show = "main.isLoggedIn">
           <li class="nav-item active">
             <a class="nav-link" href="#!/">
               <i class="fas fa-fw fa-tachometer-alt"></i>
               <span>Início</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" ng-show = "main.isLoggedIn">
             <a class="nav-link" href="#!/cadastroentorpecente">
               <i class="fas fa-fw fa-plus-square"></i>
               <span>Cadastro</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" ng-show = "main.isLoggedIn">
             <a class="nav-link" href="#!/about">
               <i class="fas fa-fw fa-chart-area"></i>
               <span>About</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" ng-show = "main.isLoggedIn">
             <a class="nav-link" href="#!/register">
               <i class="fas fa-fw fa-table"></i>
               <span>Novo usuário</span></a>
@@ -140,6 +143,7 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
+</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/js/jquery.min.js"></script>

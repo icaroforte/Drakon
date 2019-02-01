@@ -4,8 +4,6 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
     var app = this;
 
-
-
     app.registerEntorpecente = function(entorpecentedata){
 
       Entorpecente.create(app.entorpecentedata)
