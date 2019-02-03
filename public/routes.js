@@ -1,4 +1,4 @@
-var app = angular.module('appRoutes',['ngRoute'])
+var app = angular.module('appRoutes',['ngRoute','ngResource'])
 
 .config(function($routeProvider, $locationProvider){
 
@@ -42,6 +42,13 @@ var app = angular.module('appRoutes',['ngRoute'])
     templateUrl:'partials/cadastroentorpecente.html',
     controller:'entorpecenteCtrl',
     controllerAs:'entorpecente',
+    autenticado: true
+  })
+
+  .when('/editarentorpecente/:entorpecenteId',{
+    templateUrl:'partials/editarentorpecente.html',
+    controller:'editarentorpecenteCtrl',
+    controllerAs:'editarentorpecente',
     autenticado: true
   })
 

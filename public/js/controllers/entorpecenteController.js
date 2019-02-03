@@ -1,6 +1,6 @@
 angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
-.controller('entorpecenteCtrl', function($http, $location, $timeout, Entorpecente, NgTableParams){
+.controller('entorpecenteCtrl', function($http, $location, $timeout, $routeParams, Entorpecente, NgTableParams){
 
     var app = this;
 
@@ -11,14 +11,14 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
         //console.log(data.data.sucess);
         if(data.data.success){
           //Cria mensagem de sucesso
-          app.sucesso = data.data.message + ' Usuário criado com sucesso.';
+          app.sucesso = data.data.message + ' Entorpecente criado com sucesso.';
           //Redireciona para a página incial com timeout
           $timeout(function(){
             $location.path('/#!');
           },2000);
         }else{
           //Cria mensagem de erro
-          app.falha = data.data.message + ' Usuário não pôde ser criado.';
+          app.falha = data.data.message + ' Entorpecente não pôde ser criado.';
         }
       });
   }

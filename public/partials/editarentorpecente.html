@@ -5,25 +5,27 @@
 
   <div class="card mb-1 cadastro-border" style="width: 40rem;">
 
-    <form id="formEntorpecentes" ng-submit = "entorpecente.registerEntorpecente(entorpecentedata);">
+    <form id="formEditarEntorpecentes" ng-submit = "editarentorpecente.editarEntorpecente(entorpecentedata);">
 
     <div class="cadastro-header">
-      <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Cadastro
+      <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Editar
     </div>
     <br>
+
+
 
     <div class="cadastro-label">
       <label>Usuário</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control " name="usuario" type="text" required="" data-ng-model = "entorpecente.entorpecentedata.username">
+      <input class="form-control " name="usuario" type="text" required="" data-ng-model = "editarentorpecente.entorpecentedata.username">
     </div>
 
     <div class="cadastro-label">
       <label>Delegacia</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="delegacia" type="text" data-ng-model = "entorpecente.entorpecentedata.delegacia">
+      <input class="form-control" name="delegacia" type="text" data-ng-model = "editarentorpecente.entorpecentedata.delegacia">
     </div>
 
     <div class="cadastro-label">
@@ -31,17 +33,17 @@
     <div class="cadastro-radio">
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-TCO" name="optradioProcedimento" value="TCO" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-TCO" name="optradioProcedimento" value="TCO" data-ng-model="editarentorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-TCO">TCO</label>
     </div>
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-IPL" name="optradioProcedimento" value="IPL" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-IPL" name="optradioProcedimento" value="IPL" data-ng-model="editarentorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-IPL">IPL</label>
     </div>
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-PECA" name="optradioProcedimento" value="PECA" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-PECA" name="optradioProcedimento" value="PECA" data-ng-model="editarentorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-PECA">PECA</label>
     </div>
   </div>
@@ -51,60 +53,60 @@
       <label>N° procedimento</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="n_proced" type="text" data-ng-model = "entorpecente.entorpecentedata.n_proced">
+      <input class="form-control" name="n_proced" type="text" data-ng-model = "editarentorpecente.entorpecentedata.n_proced">
     </div>
 
     <div class="cadastro-label">
       <label>Laudo</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="laudo" type="text" data-ng-model = "entorpecente.entorpecentedata.laudo">
+      <input class="form-control" name="laudo" type="text" data-ng-model = "editarentorpecente.entorpecentedata.laudo">
     </div>
 
     <div class="cadastro-label">
       <label>Lacre</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="lacre" type="text" data-ng-model = "entorpecente.entorpecentedata.lacre">
+      <input class="form-control" name="lacre" type="text" data-ng-model = "editarentorpecente.entorpecentedata.lacre">
     </div>
 
     <div class="cadastro-label">
       <label>Caixa</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="caixa" type="text" data-ng-model = "entorpecente.entorpecentedata.caixa">
+      <input class="form-control" name="caixa" type="text" data-ng-model = "editarentorpecente.entorpecentedata.caixa">
     </div>
 
     <div class="cadastro-label">
       <label>Droga: </label>
     <div class="cadastro-radio">
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-cloroformio" name="optradioDroga" value="Clorofórmio" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-cloroformio" name="optradioDroga" value="Clorofórmio" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-cloroformio">Clorofórmio</label>
       </div>
 
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-cocaina" name="optradioDroga" value="Cocaína" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-cocaina" name="optradioDroga" value="Cocaína" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-cocaina">Cocaína</label>
       </div>
 
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-comprimidos" name="optradioDroga" value="Comprimidos" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-comprimidos" name="optradioDroga" value="Comprimidos" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-comprimidos">Comprimidos</label>
       </div>
 
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-crack" name="optradioDroga" value="Crack" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-crack" name="optradioDroga" value="Crack" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-crack">Crack</label>
       </div>
 
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-maconha" name="optradioDroga" value="Maconha" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-maconha" name="optradioDroga" value="Maconha" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-maconha">Maconha</label>
       </div>
 
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-outro" name="optradioDroga" value="Outro" data-ng-model="entorpecente.entorpecentedata.substancia">
+          <input type="radio" class="custom-control-input" id="radio-outro" name="optradioDroga" value="Outro" data-ng-model="editarentorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-outro">Outro</label>
       </div>
     </div>
@@ -115,11 +117,11 @@
     </div>
 
     <div class="cadastro-quantidade">
-      <input class="form-control" name="quant" type="text" data-ng-model = "entorpecente.entorpecentedata.quant">
+      <input class="form-control" name="quant" type="text" data-ng-model = "editarentorpecente.entorpecentedata.quant">
     </div>
 
 
-    <select class="browser-default custom-select cadastro-select" data-ng-model = "entorpecente.entorpecentedata.und">
+    <select class="browser-default custom-select cadastro-select" data-ng-model = "editarentorpecente.entorpecentedata.und">
       <option value="" selected disabled>Unidade</option>
       <option value="G">Grama (G)</option>
       <option value="KG">Quilograma (KG)</option>
@@ -132,42 +134,42 @@
       <label>Data entrada</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" autocomplete="off" data-ng-model = "entorpecente.entorpecentedata.data_entrada">
+      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" autocomplete="off" data-ng-model = "editarentorpecente.entorpecentedata.data_entrada">
     </div>
 
     <div class="cadastro-label">
       <label>Investigado</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="investigado" type="text" data-ng-model = "entorpecente.entorpecentedata.investigado">
+      <input class="form-control" name="investigado" type="text" data-ng-model = "editarentorpecente.entorpecentedata.investigado">
     </div>
 
     <div class="cadastro-label">
       <label>Local da apreensão</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="local_apreensao" type="text" data-ng-model = "entorpecente.entorpecentedata.local_apreensao">
+      <input class="form-control" name="local_apreensao" type="text" data-ng-model = "editarentorpecente.entorpecentedata.local_apreensao">
     </div>
 
     <div class="cadastro-label">
       <label>Data da apreensão</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_apreensao">
+      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "editarentorpecente.entorpecentedata.data_apreensao">
     </div>
 
     <div class="cadastro-label">
       <label>Vara</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="vara" type="text" data-ng-model = "entorpecente.entorpecentedata.vara">
+      <input class="form-control" name="vara" type="text" data-ng-model = "editarentorpecente.entorpecentedata.vara">
     </div>
 
     <div class="cadastro-label">
       <label>N° Processo</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="n_processo" type="text" data-ng-model = "entorpecente.entorpecentedata.n_processo">
+      <input class="form-control" name="n_processo" type="text" data-ng-model = "editarentorpecente.entorpecentedata.n_processo">
     </div>
 
 
@@ -177,12 +179,12 @@
 
       <div class="custom-control custom-radio">
         <input type="radio" class="custom-control-input" id="radio-autorizacao-sim" name="optradioAutorizacao" value="SIM"
-        data-ng-model="entorpecente.entorpecentedata.autorizacao">
+        data-ng-model="editarentorpecente.entorpecentedata.autorizacao">
         <label class="custom-control-label" for="radio-autorizacao-sim">Autorizado</label>
       </div>
 
       <div class="custom-control custom-radio">
-        <input type="radio" class="custom-control-input" id="radio-autorizacao-nao" name="optradioAutorizacao" value="NÃO" data-ng-model="entorpecente.entorpecentedata.autorizacao">
+        <input type="radio" class="custom-control-input" id="radio-autorizacao-nao" name="optradioAutorizacao" value="NÃO" data-ng-model="editarentorpecente.entorpecentedata.autorizacao">
         <label class="custom-control-label" for="radio-autorizacao-nao">Não autorizado</label>
       </div>
     </div>
@@ -192,7 +194,7 @@
       <label>Data de Autorização</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_autorizacao">
+      <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "editarentorpecente.entorpecentedata.data_autorizacao">
     </div>
 
 
@@ -200,7 +202,7 @@
       <label>Ofício</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control" name="oficio" type="text" data-ng-model = "entorpecente.entorpecentedata.oficio">
+      <input class="form-control" name="oficio" type="text" data-ng-model = "editarentorpecente.entorpecentedata.oficio">
     </div>
 
     <div class="cadastro-label">
@@ -208,12 +210,12 @@
     <div class="cadastro-radio">
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-Incinerado" name="optradioIncinerado" value="SIM" data-ng-model="entorpecente.entorpecentedata.incinerado">
+      <input type="radio" class="custom-control-input" id="radio-Incinerado" name="optradioIncinerado" value="SIM" data-ng-model="editarentorpecente.entorpecentedata.incinerado">
       <label class="custom-control-label" for="radio-Incinerado">SIM</label>
     </div>
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-NaoIncinerado" name="optradioIncinerado" value="NÃO" data-ng-model="entorpecente.entorpecentedata.incinerado">
+      <input type="radio" class="custom-control-input" id="radio-NaoIncinerado" name="optradioIncinerado" value="NÃO" data-ng-model="editarentorpecente.entorpecentedata.incinerado">
       <label class="custom-control-label" for="radio-NaoIncinerado">NÃO</label>
     </div>
   </div>

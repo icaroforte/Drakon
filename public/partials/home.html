@@ -9,7 +9,7 @@
   <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true">
     <tr ng-repeat="user in $data">
       <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
-          {{user.delegacia}}</td>
+          <a ng-href="#!/editarentorpecente/{{user._id}}">{{user.delegacia}}</a></td>
       <td title="'Proced'" filter="{ procedimento: 'text'}" sortable="'procedimento'">
           {{user.procedimento}}</td>
       <td title="'Num. Proced.'" filter="{ n_proced: 'text'}" sortable="'n_proced'">
