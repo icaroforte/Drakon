@@ -1,24 +1,53 @@
-<div class="page-header"> Registrar usuário</div>
+<div id="content-wrapper">
+ <div class="container-fluid">
+  <div class="form-group" align="center">
+   <div class="card mb-1 cadastro-border" style="width: 40rem;">
+
+      <div class="cadastro-header">
+      <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Registrar Usuário
+      </div>
 
 <form ng-submit = "register.registerUser(registerdata);">
 
-  <!-- Email -->
+  <!-- Email -
   <label>Email:</label>
   <input class="form-control" type="text" name="email" placeholder="Insira um e-mail" ng-model="register.registerdata.email">
-  <br>
-  <!-- Username -->
-  <label>Usuário:</label>
-  <input class="form-control" type="text" name="username" placeholder="Insira um nome de usuário" ng-model="register.registerdata.username">
-  <br>
-  <!-- Password -->
-  <label>Senha:</label>
-  <input class="form-control" type="password" name="password" placeholder="Insira uma senha" ng-model="register.registerdata.password">
-  <br>
+  <br> -->
+
+<br>
+
+    <div class="cadastro-label">
+      <label>Email</label>
+    </div>
+    <div class="cadastro-field">
+      <input class="form-control" type="text" name="email" placeholder="Insira um e-mail" ng-model="register.registerdata.email">
+    </div>
+
+   <div class="cadastro-label">
+      <label>Usuário</label>
+    </div>
+    <div class="cadastro-field">
+      <input class="form-control" type="text" name="username" placeholder="Insira um nome de usuário" ng-model="register.registerdata.username">
+    </div>
+
+
+     <div class="cadastro-label">
+      <label>Senha</label>
+    </div>
+    <div class="cadastro-field">
+       <input class="form-control" type="password" name="password" placeholder="Insira uma senha" ng-model="register.registerdata.password">
+    </div>
+
   <!-- Submit -->
   <button class="btn btn-primary" type="submit"> Register </button>
 
 </form>
 <br>
+
+   </div>
+  </div>
+ </div>
+</div>
 
 <div class="jumbotron text-center" ng-show="register.loading">
   <span class="glyphicon glyphicon-repeat spinner"></span>
@@ -34,3 +63,4 @@
 <div class="row show-hide-message" ng-show="register.falha">
   <div class="alert alert-danger"> {{ register.falha }} </div>
 </div>
+

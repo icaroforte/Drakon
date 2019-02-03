@@ -26,24 +26,26 @@
       <input class="form-control" name="delegacia" type="text" data-ng-model = "entorpecente.entorpecentedata.delegacia">
     </div>
 
+    <div>
     <div class="cadastro-label">
       <label>Procedimento: </label>
     <div class="cadastro-radio">
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-TCO" name="optradio" value="TCO" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-TCO" name="radiopro" value="TCO" data-ng-model="entorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-TCO">TCO</label>
     </div>
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-IPL" name="optradio" value="IPL" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-IPL" name="radiopro" value="IPL" data-ng-model="entorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-IPL">IPL</label>
     </div>
 
     <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="radio-PECA" name="optradio" value="PECA" data-ng-model="entorpecente.entorpecentedata.procedimento">
+      <input type="radio" class="custom-control-input" id="radio-PECA" name="radiopro" value="PECA" data-ng-model="entorpecente.entorpecentedata.procedimento">
       <label class="custom-control-label" for="radio-PECA">PECA</label>
     </div>
+  </div>
   </div>
   </div>
 
@@ -75,9 +77,11 @@
       <input class="form-control" name="caixa" type="text" data-ng-model = "entorpecente.entorpecentedata.caixa">
     </div>
 
+    <div>
     <div class="cadastro-label">
       <label>Droga: </label>
     <div class="cadastro-radio">
+
       <div class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="radio-cloroformio" name="optradio" value="Clorofórmio" data-ng-model="entorpecente.entorpecentedata.substancia">
           <label class="custom-control-label" for="radio-cloroformio">Clorofórmio</label>
@@ -103,11 +107,13 @@
           <label class="custom-control-label" for="radio-maconha">Maconha</label>
       </div>
 
-      <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="radio-outro" name="optradio" value="Outro" data-ng-model="entorpecente.entorpecentedata.substancia">
-          <label class="custom-control-label" for="radio-outro">Outro</label>
+      <div class="custom-control-outro">
+        <label class="custom-control-outro-label" for="radio-outro">Outro</label>
+          <input type="text" id="outro" name="optradio" data-ng-model="entorpecente.entorpecentedata.substancia">
       </div>
+
     </div>
+  </div>
   </div>
 
     <div class="cadastro-label">

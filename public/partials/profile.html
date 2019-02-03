@@ -1,19 +1,29 @@
-<div>
-  <h1>{{main.username}} perfil</h1>
-</div>
+<div id="content-wrapper">
+ <div class="container-fluid">
+  <div class="form-group" align="center">
+   <div class="card mb-1 cadastro-border" style="width: 40rem;">
 
-<div class="panel panel-info">
-  <div class="panel-heading"> Perfil do usuário </div>
-<br>
-  <table class="table">
-    <tr>
-      <td>Usuário</td>
-      <td>Email</td>
-    </tr>
-    <tr>
-      <td>{{main.username}}</td>
-      <td>{{main.email}}</td>
-    </tr>
-  </table>
+      <div class="cadastro-header">
+      <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Perfil do Usuário
+      </div>
 
+
+                
+                  <table class="table">
+                    <tr>
+                      <td>Nome:</td>
+                      <td>{{main.username}}</td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td>{{main.email}}</td>
+                    </tr>
+                  </table>
+
+                </div>
+
+
+   </div>
+  </div>
+ </div>
 </div>
