@@ -442,3 +442,11 @@ body.sidebar-toggled footer.sticky-footer {
 .pesquisa-field-index{
   margin-left: 19px;
 }
+
+tr {
+  cursor: pointer;
+}
+// or
+[ng-click] {
+  cursor: pointer;
+}
