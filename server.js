@@ -28,8 +28,8 @@ app.use('/api', appRoutes);
 
 
 //conectando banco de dados
-require('./config/database.js')('mongodb://testeapp:vqqe88@ds113815.mlab.com:13815/appteste');
-//require('./config/database.js')('mongodb://localhost:27017/teste');
+//require('./config/database.js')('mongodb://testeapp:vqqe88@ds113815.mlab.com:13815/appteste');
+require('./config/database.js')('mongodb://localhost:27017/teste');
 
 app.get('*', function(req,res){
   res.sendFile(path.join(__dirname + '/public/views/index.html'));
