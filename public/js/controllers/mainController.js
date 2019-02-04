@@ -35,6 +35,13 @@ angular.module('mainController', ['autenticarServices'])
           app.loading = false;
           //Cria mensagem de sucesso
           app.sucesso = data.data.message + ' Redirecionando para página inicial.';
+          swal({
+             title: "Logado!",
+             text: "Você está sendo redirecionado ao sistema!",
+             type: "success",
+             timer: 1500,
+             icon: "success"
+          });
           //Redireciona para a página incial com timeout
           $timeout(function(){
             app.logindata = '';
@@ -46,6 +53,14 @@ angular.module('mainController', ['autenticarServices'])
           app.loading = false;
           //Cria mensagem de erro
           app.falha = data.data.message;
+          swal({
+             title: "Atenção!",
+             text: "Usuário ou senha inválidos!",
+             type: "error",
+             timer: 3000,
+             icon: "error"
+          });
+
         }
       });
     };
