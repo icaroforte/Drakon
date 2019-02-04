@@ -9,6 +9,7 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
       $location.path('/editarentorpecente/' + user._id);
     }
 
+    //Registra o entorpecente
     app.registerEntorpecente = function(entorpecentedata){
 
       Entorpecente.create(app.entorpecentedata)
@@ -30,6 +31,7 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
   app.entorpecentes = [];
 
+
   var data = [];
 
   let buscaEntorpecentes = () =>{
@@ -37,6 +39,7 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
     Entorpecente.getEntorpecentes()
     .then(function(data){
       app.entorpecentes = data.data;
+      app.entorpecentes.reverse();
       data = data.data;
 
       app.tableParams = new NgTableParams({}, { dataset: data});
