@@ -15,11 +15,12 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
         //console.log(data.data);
         app.entorpecentedata = data.data;
         //console.log(app.entorpecentedata);
+        return data.data;
       });
     }
 
-    app.editarEntorpecente = function(entorpecentedata){
-      console.log(app.entorpecentedata);
+    app.editarEntorpecente = function(entorpecentedata, username){
+      app.entorpecentedata.username = username;
       Entorpecente.atualizaEntorpecente(app.entorpecentedata)
       .then(function(data){
         console.log(data.status);

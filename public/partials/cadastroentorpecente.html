@@ -5,20 +5,13 @@
 
   <div class="card mb-1 cadastro-border" style="width: 40rem;">
 
-    <form id="formEntorpecentes" ng-submit = "entorpecente.registerEntorpecente(entorpecentedata);">
+    <form id="formEntorpecentes" data-ng-value = "entorpecente.entorpecentedata.username = main.username" ng-submit = "entorpecente.registerEntorpecente(entorpecentedata);">
 
     <div class="cadastro-header">
       <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Cadastro
     </div>
     <br>
-
-    <div class="cadastro-label">
-      <label>Usuário</label>
-    </div>
-    <div class="cadastro-field">
-      <input class="form-control " name="usuario" type="text" required="" data-ng-model = "entorpecente.entorpecentedata.username">
-    </div>
-
+    <br>
     <div class="cadastro-label">
       <label>Delegacia</label>
     </div>

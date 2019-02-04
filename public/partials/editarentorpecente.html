@@ -5,7 +5,8 @@
 
   <div class="card mb-1 cadastro-border" style="width: 40rem;">
 
-    <form id="formEditarEntorpecentes" ng-submit = "editarentorpecente.editarEntorpecente(entorpecentedata);">
+
+    <form id="formEditarEntorpecentes" ng-submit = "editarentorpecente.editarEntorpecente(entorpecentedata, main.username);">
 
     <div class="cadastro-header">
       <img src="/vendor/images/Black_dragon.png" class="cadastro-header-image"> Editar
@@ -13,12 +14,11 @@
     <br>
 
 
-
     <div class="cadastro-label">
-      <label>Usuário</label>
+      <label>Último usuário a criar/editar</label>
     </div>
     <div class="cadastro-field">
-      <input class="form-control " name="usuario" type="text" required="" data-ng-model = "editarentorpecente.entorpecentedata.username">
+      <input class="form-control " name="usuario" type="text" required="" data-ng-model = "editarentorpecente.entorpecentedata.username" readonly>
     </div>
 
     <div class="cadastro-label">
@@ -228,6 +228,7 @@
   </div>
  </div>
 </div>
+
 
 <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

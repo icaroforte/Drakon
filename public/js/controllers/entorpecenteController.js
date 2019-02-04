@@ -11,7 +11,7 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
     //Registra o entorpecente
     app.registerEntorpecente = function(entorpecentedata){
-
+      
       Entorpecente.create(app.entorpecentedata)
       .then(function(data){
         //console.log(data.data.sucess);
