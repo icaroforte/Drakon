@@ -11,22 +11,30 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 
     //Registra o entorpecente
     app.registerEntorpecente = function(entorpecentedata){
-      
-      Entorpecente.create(app.entorpecentedata)
-      .then(function(data){
-        //console.log(data.data.sucess);
-        if(data.data.success){
-          //Cria mensagem de sucesso
-          app.sucesso = data.data.message + ' Entorpecente criado com sucesso.';
-          //Redireciona para a página incial com timeout
-          $timeout(function(){
-            $location.path('/#!');
-          },2000);
-        }else{
-          //Cria mensagem de erro
-          app.falha = data.data.message + ' Entorpecente não pôde ser criado.';
-        }
-      });
+      //Necessita pelo menos usuário e a delegacia para registrar Entorpecente
+      if(app.entorpecentedata.username != null && app.entorpecentedata.username != '' && app.entorpecentedata.delegacia != null && app.entorpecentedata.delegacia != ''){
+
+        Entorpecente.create(app.entorpecentedata);
+
+        //Alerta de sucesso no cadastro
+        swal({
+           title: "Cadastrado!",
+           text: "O registro foi realizado com sucesso!",
+           icon: "success"
+        });
+
+        //Irá limpar o formulário após registrar o entorpecente
+        app.entorpecentedata = null;
+
+      }else{
+
+        //Alerta de falha no cadastro
+        swal({
+           title: "Não cadastrado!",
+           text: "Algo de errado aconteceu e o entorpecente não foi registrado",
+           icon: "error"
+        });
+      }
   }
 
   app.entorpecentes = [];
