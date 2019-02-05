@@ -66,11 +66,28 @@ angular.module('mainController', ['autenticarServices'])
     };
 
   this.logout = function(){
-    Autenticar.logout();
-    //$location.path('/logout');
-    $timeout(function(){
-      $window.location.href = '/about';
-    }, 2000);
+
+    swal({
+      title: "Deseja sair do sistema?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Você foi desconectado!", {
+          icon: "success",
+          timer: 1900
+        });
+        Autenticar.logout();
+        $timeout(function(){
+          $window.location.reload(true);
+        }, 2000);
+      } else {
+
+      }
+    });
+
   };
 
 });
