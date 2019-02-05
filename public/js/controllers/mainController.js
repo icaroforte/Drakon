@@ -67,7 +67,7 @@ angular.module('mainController', ['autenticarServices'])
 
   this.logout = function(){
     Autenticar.logout();
-    $location.path('/logout');
+    //$location.path('/logout');
     $timeout(function(){
       $window.location.href = '/about';
     }, 2000);

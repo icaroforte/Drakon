@@ -5,8 +5,8 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
     var app = this;
 
     //Esta diretiva auxilia o ng-click da tabela, para tornar toda a linha um link.
-    app.linkedTable = function(user){
-      $location.path('/editarentorpecente/' + user._id);
+    app.linkedTable = function(entorpecente){
+      $location.path('/editarentorpecente/' + entorpecente._id);
     }
 
     //Registra o entorpecente

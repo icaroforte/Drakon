@@ -7,43 +7,43 @@
 <!--<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%"> -->
 
   <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true">
-    <tr ng-repeat="user in $data" ng-click="entorpecente.linkedTable(user);">
+    <tr ng-repeat="item in $data" ng-click="entorpecente.linkedTable(item);">
       <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
-          {{user.delegacia}}</td>
+          {{item.delegacia}}</td>
       <td title="'Proced'" filter="{ procedimento: 'text'}" sortable="'procedimento'">
-          {{user.procedimento}}</td>
+          {{item.procedimento}}</td>
       <td title="'Num. Proced.'" filter="{ n_proced: 'text'}" sortable="'n_proced'">
-        {{user.n_proced}}</td>
+        {{item.n_proced}}</td>
       <td title="'Laudo'" filter="{ laudo: 'text'}" sortable="'laudo'">
-        {{user.laudo}}</td>
+        {{item.laudo}}</td>
       <td title="'Lacre'" filter="{ lacre: 'text'}" sortable="'lacre'">
-        {{user.lacre}}</td>
+        {{item.lacre}}</td>
       <td title="'Substância'" filter="{ substancia: 'text'}" sortable="'substancia'">
-        {{user.substancia}}</td>
+        {{item.substancia}}</td>
       <td title="'Qtd'" filter="{ quant: 'number'}" sortable="'quant'">
-        {{user.quant}}</td>
+        {{item.quant}}</td>
       <td title="'Und'" filter="{ und: 'text'}" sortable="'und'">
-        {{user.und}}</td>
+        {{item.und}}</td>
       <td title="'Data'" filter="{ data_entrada: 'text'}" sortable="'data_entrada'">
-        {{user.data_entrada}}</td>
+        {{item.data_entrada}}</td>
       <td title="'Investigado'" filter="{ investigado: 'text'}" sortable="'investigado'">
-        {{user.investigado}}</td>
+        {{item.investigado}}</td>
       <td title="'Local Apreen'" filter="{ local_apreensao: 'text'}" sortable="'local_apreensao'">
-        {{user.local_apreensao}}</td>
+        {{item.local_apreensao}}</td>
       <td title="'Data Apreen'" filter="{ data_apreensao: 'text'}" sortable="'data_apreensao'">
-        {{user.data_apreensao}}</td>
+        {{item.data_apreensao}}</td>
       <td title="'Vara'" filter="{ vara: 'text'}" sortable="'vara'">
-        {{user.vara}}</td>
+        {{item.vara}}</td>
       <td title="'N° Processo'" filter="{ n_processo: 'text'}" sortable="'n_processo'">
-        {{user.n_processo}}</td>
+        {{item.n_processo}}</td>
       <td title="'Autorizado'" filter="{ autorizacao: 'text'}" sortable="'autorizacao'">
-        {{user.autorizacao}}</td>
+        {{item.autorizacao}}</td>
       <td title="'Data Autorização'" filter="{ data_autorizacao: 'text'}" sortable="'data_autorizacao'">
-        {{user.data_autorizacao}}</td>
+        {{item.data_autorizacao}}</td>
       <td title="'Ofício'" filter="{ oficio: 'text'}" sortable="'oficio'">
-        {{user.oficio}}</td>
+        {{item.oficio}}</td>
       <td title="'Incinerado'" filter="{ incinerado: 'text'}" sortable="'incinerado'">
-        {{user.incinerado}}</td>
+        {{item.incinerado}}</td>
 
     </tr>
   </table>
