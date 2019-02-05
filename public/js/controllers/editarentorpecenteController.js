@@ -15,18 +15,34 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
 
     app.editarEntorpecente = function(entorpecentedata, username){
       app.entorpecentedata.username = username;
-      Entorpecente.atualizaEntorpecente(app.entorpecentedata)
-      .then(function(data){
-        console.log(data.status);
-        if(data.status == 200){
-          //swal aqui
+
+      if(app.entorpecentedata.username != null && app.entorpecentedata.username != '' && app.entorpecentedata.delegacia != null && app.entorpecentedata.delegacia != ''){
+
+        Entorpecente.atualizaEntorpecente(app.entorpecentedata)
+        .then(function(data){
+          console.log(data.status);
           console.log('Entorpencete atualizado com sucesso');
-        }else{
-          //swal aqui
-          console.log('Houve algum erro na atualização do entorpecente');
-        }
-      });
+          swal({
+             title: "Editado!",
+             text: "O registro foi atualizado com sucesso!",
+             icon: "success",
+             timer: 3000
+          });
+        });
 
-  }
+        //Redireciona para a página incial com timeout
+        $timeout(function(){
+          $location.path('/#!');
+        },3000);
 
-});
+      }else{
+
+        swal({
+           title: "Não foi possível editar!",
+           text: "Verifique se os campos estão preenchidos corretamente.",
+           icon: "error"
+        });
+      }
+    }
+
+  });

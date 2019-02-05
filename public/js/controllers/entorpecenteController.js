@@ -31,7 +31,7 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
         //Alerta de falha no cadastro
         swal({
            title: "Não cadastrado!",
-           text: "Algo de errado aconteceu e o entorpecente não foi registrado",
+           text: "Algo de errado aconteceu e o entorpecente não foi registrado.",
            icon: "error"
         });
       }
