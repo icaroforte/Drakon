@@ -1,6 +1,7 @@
 <div class="card mb-3">
   <div class="card-body">
     <img id="printBtn" align="right" border="0" src="vendor/images/print_icon.png" width="30" height="30" ng-click="entorpecente.imprimirTabela();">
+    <img id="export" align="right" style="padding-right:3px" src="vendor/images/csv_icon.png" width="30" height="30" onclick placeholder="Clique para baixar CSV da tabela">
     <div class="table-responsive">
       <div class="row">
 </div>
@@ -48,3 +49,13 @@
 
     </tr>
   </table>
+
+  <script src="vendor/js/tabletoCSV.js"></script>
+    <!-- Ativar a exportação da tabela para CSV -->
+    <script>
+        $(function(){
+            $("#export").click(function(){
+                $("#entorpecenteTabela").tableToCSV();
+            });
+        });
+    </script>
