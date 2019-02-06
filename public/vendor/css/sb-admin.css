@@ -405,6 +405,8 @@ body.sidebar-toggled footer.sticky-footer {
 }
 .cadastro-button{
   margin-top: 13px;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 .cadastro-radio{
   margin-left: 35px;
