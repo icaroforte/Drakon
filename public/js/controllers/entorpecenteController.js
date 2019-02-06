@@ -58,4 +58,13 @@ angular.module('entorpecenteController',['entorpecenteServices','ngTable'])
 buscaEntorpecentes();
 
 
+app.imprimirTabela = function(){
+   var divToPrint = document.getElementById("entorpecenteTabela");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+   newWin.close();
+}
+
+
 });

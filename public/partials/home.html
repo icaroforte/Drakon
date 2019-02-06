@@ -1,12 +1,13 @@
 <div class="card mb-3">
   <div class="card-body">
+    <img id="printBtn" align="right" border="0" src="vendor/images/print_icon.png" width="30" height="30" ng-click="entorpecente.imprimirTabela();">
     <div class="table-responsive">
       <div class="row">
 </div>
 
 <!--<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%"> -->
 
-  <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true">
+  <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true" id="entorpecenteTabela">
     <tr ng-repeat="item in $data" ng-click="entorpecente.linkedTable(item);">
       <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
           {{item.delegacia}}</td>
