@@ -1,3 +1,4 @@
+
 /* Made with love by Mutiullah Samim*/
 html,body{
 background-color: #424242;
@@ -8,19 +9,24 @@ font-family: 'Numans', sans-serif;
 }
 
 .container{
-height: 100%;
+height: 500%;
 align-content: center;
 }
 
 .card{
-height: 400px;
+height: 1800px;
 margin-top: auto;
 margin-bottom: auto;
-width: 400px;
+width: 600px;
 background-color: rgba(0,0,0,0.5) !important;
 color: white;
 }
 
+.cadastro-label{
+margin-top: auto;
+margin-bottom: auto;
+width: 500px;f;
+}
 
 .social_icon span{
 font-size: 60px;
@@ -35,7 +41,7 @@ cursor: pointer;
 
 .card-header h3{
 color: white;
-align-content: center;
+margin-left: 65px;
 }
 
 .social_icon{
@@ -46,7 +52,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color:#FFC312;
+background-color: #FFC312;
 color: black;
 border:0 !important;
 }
@@ -71,7 +77,7 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #FFC312;
+background-color: #FFFFFF;
 width: 100px;
 }
 
@@ -81,7 +87,7 @@ background-color: white;
 }
 
 .links{
-color: white;
+color: #FFC312;
 }
 
 .links a{
