@@ -412,16 +412,15 @@ body.sidebar-toggled footer.sticky-footer {
 }
 .cadastro-select{
   margin-top: -64px;
-  margin-left: 0px;
+  margin-left: 220px;
   width: 25%;
 }
 .cadastro-quantidade{
-  margin-left:-350px;
-  width: 25%;
+  margin-left: 65px;
+  width: 24%;
 }
 .cadastro-date{
-  width: 25%;
-  margin-left:-382px;
+  width: 26%; 
 }
 .bootstrap-select ul.dropdown-menu li:first-child {
     display: none;
