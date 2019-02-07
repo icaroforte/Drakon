@@ -238,6 +238,21 @@
 <link href="vendor/css/cadastroentorpecente.css" rel="stylesheet">
 <br><br><br>
 
+<head>
+<style> 
+input[type=text] {
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+</style>
+</head>
+
 <div class="container">
  <div class="d-flex justify-content-center h-100">
   <div class="card">
@@ -258,7 +273,7 @@
             <label>Delegacia</label>
          
           <div class="cadastro-field">
-            <input class="form-control" name="delegacia" type="text" required="" data-ng-model = "entorpecente.entorpecentedata.delegacia">
+            <input name="delegacia" type="text" required="" data-ng-model = "entorpecente.entorpecentedata.delegacia">
           </div>  </div>
 
           <div class="cadastro-label">
@@ -286,28 +301,28 @@
             <label>N° procedimento</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="n_proced" type="text" data-ng-model = "entorpecente.entorpecentedata.n_proced">
+            <input name="n_proced" type="text" data-ng-model = "entorpecente.entorpecentedata.n_proced">
           </div></div>
 
           <div class="cadastro-label">
             <label>Laudo</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="laudo" type="text" data-ng-model = "entorpecente.entorpecentedata.laudo">
+            <input name="laudo" type="text" data-ng-model = "entorpecente.entorpecentedata.laudo">
           </div></div>
 
           <div class="cadastro-label">
             <label>Lacre</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="lacre" type="text" data-ng-model = "entorpecente.entorpecentedata.lacre">
+            <input name="lacre" type="text" data-ng-model = "entorpecente.entorpecentedata.lacre">
           </div></div>
 
           <div class="cadastro-label">
             <label>Caixa</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="caixa" type="text" data-ng-model = "entorpecente.entorpecentedata.caixa">
+            <input name="caixa" type="text" data-ng-model = "entorpecente.entorpecentedata.caixa">
           </div></div>
 
           <div class="cadastro-label">
@@ -338,9 +353,9 @@
                 <label class="custom-control-label" for="radio-maconha">Maconha</label>
             </div>
 
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="radio-outro" name="optradioDroga" value="Outro" data-ng-model="entorpecente.entorpecentedata.substancia">
-                <label class="custom-control-label" for="radio-outro">Outro</label>
+           
+            <div class="cadastro-outro">
+                <input type="text" id="outro" name="optradioDroga" value="Outro" data-ng-model="entorpecente.entorpecentedata.substancia" placeholder="Outro" >
             </div>
           </div>
         </div>
@@ -350,7 +365,7 @@
           </div>
           
           <div class="cadastro-quantidade">
-            <input class="form-control" name="quant" type="text" data-ng-model = "entorpecente.entorpecentedata.quant">
+            <input name="quant" type="text" data-ng-model = "entorpecente.entorpecentedata.quant">
           </div>
 
 
@@ -365,43 +380,46 @@
 
           <div class="cadastro-label">
             <label>Data entrada</label>
+          </div>
           
-          
-            <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" autocomplete="off" data-ng-model = "entorpecente.entorpecentedata.data_entrada">
+           <div class="cadastro-date">
+            <input class="cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" autocomplete="off" data-ng-model = "entorpecente.entorpecentedata.data_entrada">
           </div>
 
           <div class="cadastro-label">
             <label>Investigado</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="investigado" type="text" data-ng-model = "entorpecente.entorpecentedata.investigado">
+            <input name="investigado" type="text" data-ng-model = "entorpecente.entorpecentedata.investigado">
           </div></div>
 
           <div class="cadastro-label">
             <label>Local da apreensão</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="local_apreensao" type="text" data-ng-model = "entorpecente.entorpecentedata.local_apreensao">
+            <input name="local_apreensao" type="text" data-ng-model = "entorpecente.entorpecentedata.local_apreensao">
           </div></div>
 
           <div class="cadastro-label">
             <label>Data da apreensão</label>
+          </div>
           
-            <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_apreensao">
+          <div class="cadastro-date">
+            <input class="cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_apreensao">
           </div>
 
           <div class="cadastro-label">
             <label>Vara</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="vara" type="text" data-ng-model = "entorpecente.entorpecentedata.vara">
+            <input name="vara" type="text" data-ng-model = "entorpecente.entorpecentedata.vara">
           </div></div>
 
           <div class="cadastro-label">
             <label>N° Processo</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="n_processo" type="text" data-ng-model = "entorpecente.entorpecentedata.n_processo">
+            <input name="n_processo" type="text" data-ng-model = "entorpecente.entorpecentedata.n_processo">
           </div></div>
 
 
@@ -424,8 +442,10 @@
 
           <div class="cadastro-label">
             <label>Data de Autorização</label>
+          </div>
           
-            <input class="form-control cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_autorizacao">
+          <div class="cadastro-date">
+            <input class="cadastro-date" id="date" name="date" placeholder="DD/MM/AAAA" type="text" data-ng-model = "entorpecente.entorpecentedata.data_autorizacao">
           </div>
 
 
@@ -433,7 +453,7 @@
             <label>Ofício</label>
           
           <div class="cadastro-field">
-            <input class="form-control" name="oficio" type="text" data-ng-model = "entorpecente.entorpecentedata.oficio">
+            <input name="oficio" type="text" data-ng-model = "entorpecente.entorpecentedata.oficio">
           </div></div>
 
           <div class="cadastro-label">
