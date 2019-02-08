@@ -261,9 +261,8 @@
 
           <div class="cadastro-label">
             <label>Procedimento: </label>
+            <div class="radio-conteiner">
           <div class="cadastro-radio">
-            <fieldset>
-
 
           <div class="radio-item">
             <input type="radio" id="radio-TCO" name="optradioProcedimento" value="TCO" data-ng-model="entorpecente.entorpecentedata.procedimento">
@@ -279,6 +278,7 @@
             <input type="radio" id="radio-PECA" name="optradioProcedimento" value="PECA" data-ng-model="entorpecente.entorpecentedata.procedimento">
             <label class="" for="radio-PECA">PECA</label>
           </div>
+        </div>
         </div>
         </div>
 
@@ -310,11 +310,13 @@
             <input name="caixa" type="text" data-ng-model = "entorpecente.entorpecentedata.caixa">
           </div></div>
 
+
           <div class="cadastro-label">
             <label>Droga: </label>
+            <div class="radio-conteiner">
           <div class="radio-item">
             <div class="radio-item">
-                <input type="radio" id="radio-cloroformio" name="optradioDroga" value="Clorofórmio" data-ng-model="entorpecente.entorpecentedata.substancia">
+                <input type="radio" class="" id="radio-cloroformio" name="optradioDroga" value="Clorofórmio" data-ng-model="entorpecente.entorpecentedata.substancia">
                 <label  for="radio-cloroformio">Clorofórmio</label>
             </div>
 
@@ -329,12 +331,12 @@
             </div>
 
             <div class="radio-item">
-                <input type="radio" class="custom-control-input" id="radio-crack" name="optradioDroga" value="Crack" data-ng-model="entorpecente.entorpecentedata.substancia">
+                <input type="radio" id="radio-crack" name="optradioDroga" value="Crack" data-ng-model="entorpecente.entorpecentedata.substancia">
                 <label for="radio-crack">Crack</label>
             </div>
 
             <div class="radio-item">
-                <input type="radio" class="custom-control-input" id="radio-maconha" name="optradioDroga" value="Maconha" data-ng-model="entorpecente.entorpecentedata.substancia">
+                <input type="radio" id="radio-maconha" name="optradioDroga" value="Maconha" data-ng-model="entorpecente.entorpecentedata.substancia">
                 <label for="radio-maconha">Maconha</label>
             </div>
 
@@ -343,7 +345,7 @@
             </div>
           </div>
         </div>
-
+        </div>
           <div class="cadastro-label">
             <label>Quantidade</label>
           </div>
@@ -410,7 +412,7 @@
          <div class="cadastro-label">
               <label>Autorização: </label>
             <div class="cadastro-radio">
-
+              <div class="radio-conteiner">
             <div class="radio-item">
               <input type="radio" id="radio-autorizacao-sim" name="optradioAutorizacao" value="SIM"
               data-ng-model="entorpecente.entorpecentedata.autorizacao">
@@ -421,6 +423,7 @@
               <input type="radio" id="radio-autorizacao-nao" name="optradioAutorizacao" value="NÃO" data-ng-model="entorpecente.entorpecentedata.autorizacao">
               <label for="radio-autorizacao-nao">NÃO</label>
             </div>
+          </div>
           </div>
           </div>
 
@@ -442,6 +445,7 @@
 
           <div class="cadastro-label">
             <label>Incinerado:</label>
+            <div class="radio-conteiner">
           <div class="cadastro-radio">
 
           <div class="radio-item">
@@ -455,8 +459,9 @@
           </div>
         </div>
         </div>
+        </div>
 
-          <button id="submitBtn" data-target="#confirm-submit" class="btn float-right btn-outline-light" type="submit">Salvar</button>
+          <button id="submitBtn" data-target="#confirm-submit" class="btn float-right btn-outline-light cadastro-btn" type="submit">Salvar</button>
         </form>
 
 
