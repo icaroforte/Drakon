@@ -162,7 +162,7 @@ input[type=text] {
   background: transparent;
   width: 100%;
   padding-top: 10px;
-  margin: 8px;
+  margin-top: 8px;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid white;
