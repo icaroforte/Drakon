@@ -36,9 +36,11 @@ color: white;
   height:40px;
 }
 .cadastro-label{
+  color: white;
   text-align: left;
   margin-left: 65px;
 }
+
 .cadastro-label-padding{
   margin-top:-15px;
 }
@@ -97,7 +99,7 @@ cursor: pointer;
 }
 
 .card-header{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #8c8c8c;
 }
 .card-header h3{
 color: white;
@@ -164,7 +166,7 @@ input[type=text] {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid white;
-  color: white;
+  color:#8c8c8c;
 }
 
 input:focus,
@@ -179,7 +181,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: #8c8c8c; !important;
 }
 
 .radio-item {
@@ -187,8 +189,6 @@ input:-webkit-autofill:active {
   position: relative;
   padding: 0 6px;
   margin: 10px 0 0;
-
-
 }
 
 .radio-item input[type='radio'] {
