@@ -161,8 +161,8 @@ input[type=text] {
   background-color: rgba(0,0,0,0);
   background: transparent;
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding-top: 10px;
+  margin: 8px;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid white;
