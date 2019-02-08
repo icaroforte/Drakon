@@ -14,18 +14,78 @@ align-content: center;
 }
 
 .card{
-height: 2300px;
+height: auto;
 margin-top: auto;
 margin-bottom: auto;
 width: 600px;
 background-color: rgba(0,0,0,0.5) !important;
 color: white;
 }
+.cadastro-header{
+    background-color: #394046;
+    background-image: linear-gradient(to bottom, #394046, #67747e 130%);
+    color: white;
+    height: 70px;
+    border-radius: 1px;
+    padding-top: 17px;
+    font-size: 28px;
+    font-weight: 100;
+}
 
+.cadastro-header-image{
+  width:30px;
+  height:40px;
+}
 .cadastro-label{
-margin-top: auto;
-margin-bottom: auto;
-width: 500px;
+  color: white;
+  text-align: left;
+  margin-left: 65px;
+}
+
+.cadastro-label-padding{
+  margin-top:-15px;
+}
+.cadastro-field{
+  margin-top: -25px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+.cadastro-border{
+  border-width: 1px;
+  border-color: #454d54;
+}
+.cadastro-button{
+  margin-top: 13px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+.cadastro-radio{
+  margin-left: 35px;
+  margin-bottom: 5px;
+}
+.cadastro-select{
+  margin-top: -80px;
+  margin-left: 250px;
+  width: 30%;
+}
+.cadastro-quantidade{
+  margin-top:-20px;
+  margin-left: 65px;
+  width: 30%;
+}
+
+.cadastro-outro{
+  width: 80%;
+  margin-bottom:20px;
+}
+.cadastro-date{
+  margin-top:-20px;
+  margin-bottom: 20px;
+  margin-left: 65px;
+  width: 30%;
+}
+.cadastro-btn{
+  width:23%;
 }
 
 .social_icon span{
@@ -39,9 +99,12 @@ color: white;
 cursor: pointer;
 }
 
+.card-header{
+  border-bottom: 1px solid #8c8c8c;
+}
 .card-header h3{
 color: white;
-margin-left: 50px;
+margin-left: 65px;
 }
 
 .social_icon{
@@ -52,7 +115,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
+background-color: rgba(0,0,0,0);
 color: black;
 border:0 !important;
 }
@@ -60,6 +123,7 @@ border:0 !important;
 input:focus{
 outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
+background-color: rgba(0,0,0,0);
 
 }
 
@@ -79,14 +143,11 @@ margin-right: 5px;
 color: black;
 background-color: #FFFFFF;
 width: 100px;
-margin-top: auto;
-margin-bottom: auto;
 }
 
 .login_btn:hover{
 color: black;
 background-color: white;
-align-content: center;
 }
 
 .links{
@@ -95,4 +156,78 @@ color: #FFC312;
 
 .links a{
 margin-left: 4px;
+}
+
+input[type=text] {
+  background-color: rgba(0,0,0,0);
+  background: transparent;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid white;
+  color:#8c8c8c;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #8c8c8c; !important;
+}
+
+.radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+  display: none;
+}
+
+.radio-item label {
+  color: white;
+  font-weight: normal;
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid gray;
+  background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: lightgray;
+
+}
+
+.radio-conteiner{
+  margin-top:-15px;
+  width:400px;
 }
