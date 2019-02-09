@@ -5,6 +5,8 @@ angular.module('userController',['userServices'])
     var app = this;
 
     app.registerUser = function(registerdata){
+      console.log(registerdata);
+
       app.loading = true;
       app.falha = false;
 
