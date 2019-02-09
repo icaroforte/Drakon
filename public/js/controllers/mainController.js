@@ -3,7 +3,7 @@ angular.module('mainController', ['autenticarServices'])
 .controller('mainCtrl', function(Autenticar, $timeout, $location, $rootScope, $window){
 
     var app = this;
-
+    
     //serve para que primeiro se carregue todo a HTML, para depois exibir o angular
     app.loadme = false;
 
