@@ -13,7 +13,7 @@ var app = angular.module('appRoutes',['ngRoute','ngResource'])
 
   .when('/about',{
     templateUrl:'partials/about.html',
-    autenticado: false
+    autenticado: true
   })
 
   .when('/register',{
@@ -25,7 +25,7 @@ var app = angular.module('appRoutes',['ngRoute','ngResource'])
 
   .when('/login',{
     templateUrl:'partials/login.html',
-    autenticado: true
+    autenticado: false
   })
 
   .when('/logout',{
@@ -70,7 +70,7 @@ app.run(['$rootScope', 'Autenticar','$location',function($rootScope, Autenticar,
     }else{
       if(next.$$route.autenticado == true){
         event.preventDefault();
-        $location.path('/about');
+        $location.path('/login');
       }
     }
     /*
