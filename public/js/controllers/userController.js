@@ -7,25 +7,27 @@ angular.module('userController',['userServices'])
     app.registerUser = function(registerdata){
       console.log(registerdata);
 
-      app.loading = true;
-      app.falha = false;
-
       User.create(app.registerdata)
       .then(function(data){
-        //console.log(data.data.sucess);
-        if(data.data.success){
-          app.loading = false;
-          //Cria mensagem de sucesso
-          app.sucesso = data.data.message + ' Redirecionando para página inicial.';
-          //Redireciona para a página incial com timeout
+        console.log(data);
+        if(data.data.sucess){
+          swal({
+             title: "Usuário cadastrado!",
+             text: "Ocorreu tudo bem ao cadastrar o novo usuário.",
+             type: "success",
+             timer: 3000,
+             icon: "success"
+          });
           $timeout(function(){
             $location.path('/#!');
-          },2000);
-
+          },3000);
         }else{
-          app.loading = false;
-          //Cria mensagem de erro
-          app.falha = data.data.message;
+          swal({
+             title: "Atenção, usuário não cadastrado!",
+             text: data.data.message,
+             type: "error",
+             icon: "error"
+          });
         }
       });
   }
