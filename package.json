@@ -1,0 +1,21 @@
+{
+  "name": "mean-example",
+  "version": "1.0.0",
+  "description": "MEAN-Stack Example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ícaro Forte",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.6",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  }
+}
