@@ -20,7 +20,7 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
 
         Entorpecente.atualizaEntorpecente(app.entorpecentedata)
         .then(function(data){
-          console.log(data.status);
+          console.log(data.status == 200);
           console.log('Entorpencete atualizado com sucesso');
           swal({
              title: "Editado!",
@@ -43,6 +43,56 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
            icon: "error"
         });
       }
+    }
+
+    app.deleteEntorpecente = function(){
+
+
+      swal({
+        title: "Deseja realmente deletar este entorpencete?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+
+          Entorpecente.deleteEntorpecente($routeParams.entorpecenteId).then(function(data){
+
+            if(data.data.deletedCount == 1){
+              console.log('Entorpecente deletado com sucesso');
+              swal({
+                 title: "Deletado!",
+                 text: "O entorpecente foi apagado!",
+                 icon: "success",
+                 timer: 3000
+              });
+              //Redireciona para a página incial com timeout
+              $timeout(function(){
+                $location.path('/#!');
+              },3000);
+
+            }else{
+              swal({
+                 title: "Não foi possível deletar!",
+                 text: "Algo de errado aconteceu e não o entorpecente não pode ser deletado.",
+                 icon: "error"
+              });
+            }
+            //console.log(data);
+
+          });
+
+        } else {
+
+        }
+      });
+
+
+ //fim Entorpecente
+
+
+
     }
 
   });

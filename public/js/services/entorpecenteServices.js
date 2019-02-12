@@ -26,6 +26,11 @@ angular.module('entorpecenteServices',[])
 
   }
 
+  entorpecenteFactory.deleteEntorpecente = function(entorpecenteId){
+    return $http.delete('/api/entorpecente/'+entorpecenteId);
+  }
+
+
   return entorpecenteFactory;
 
 });
