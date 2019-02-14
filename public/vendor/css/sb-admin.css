@@ -183,7 +183,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 225px !important;
+    width: 180px !important;
   }
   .sidebar .nav-item .nav-link {
     display: block;
@@ -400,4 +400,12 @@ tr {
 // or
 [ng-click] {
   cursor: pointer;
+}
+
+.table{
+  font-size: 14px;
+}
+
+.table th{
+  font-size:12px;
 }

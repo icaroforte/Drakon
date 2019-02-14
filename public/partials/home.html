@@ -1,14 +1,14 @@
-
+<script src="vendor/js/fnExcelReport.js"></script>
 <div class="card mb-3">
   <div class="card-body">
     <img id="printBtn" align="right" border="0" src="vendor/images/print_icon.png" width="30" height="30" ng-click="entorpecente.imprimirTabela();">
     <img id="export" align="right" style="padding-right:3px" src="vendor/images/csv_icon.png" width="30" height="30" onclick placeholder="Clique para baixar CSV da tabela">
+    <a href="#!" id="xlsTable" onClick="javascript:fnExcelReport();"><img id="xlsTable" align="right" style="padding-right:3px" src="vendor/images/xls.png" width="28" height="28" placeholder="Clique para baixar XLS da tabela"></a>
     <div class="table-responsive">
       <div class="row">
 </div>
 
 <!--<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%"> -->
-
   <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true" id="entorpecenteTabela">
     <tr ng-repeat="item in $data" ng-click="entorpecente.linkedTable(item);">
       <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
@@ -49,6 +49,8 @@
         {{item.incinerado}}</td>
 
     </tr>
+
+
   </table>
 
   <script src="vendor/js/tabletoCSV.js"></script>

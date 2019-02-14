@@ -84,15 +84,9 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
           });
 
         } else {
-
+          //nothing
         }
       });
-
-
- //fim Entorpecente
-
-
-
     }
 
   });

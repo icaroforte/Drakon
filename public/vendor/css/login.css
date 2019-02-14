@@ -1,19 +1,26 @@
 /* Made with love by Mutiullah Samim*/
 html,body{
-background-image: url("../images/police.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
+  background-image: url("../images/police1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+}
+
+.logoLogin{
+  size:300px;
 }
 
 .container{
-height: 100%;
-align-content: center;
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .card{
-height: 370px;
+height: 530px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -33,6 +40,16 @@ cursor: pointer;
 
 .card-header h3{
 color: white;
+}
+
+.card-header img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  margin-top: -110px;
+  margin-bottom: -105px;
+
 }
 
 .social_icon{
