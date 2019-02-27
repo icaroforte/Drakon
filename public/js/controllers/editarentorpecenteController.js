@@ -26,7 +26,8 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
              title: "Editado!",
              text: "O registro foi atualizado com sucesso!",
              icon: "success",
-             timer: 3000
+             timer: 3000,
+             buttons: false
           });
         });
 
@@ -65,7 +66,8 @@ angular.module('editarentorpecenteController',['entorpecenteServices','ngTable']
                  title: "Deletado!",
                  text: "O entorpecente foi apagado!",
                  icon: "success",
-                 timer: 3000
+                 timer: 3000,
+                 buttons: false
               });
               //Redireciona para a página incial com timeout
               $timeout(function(){

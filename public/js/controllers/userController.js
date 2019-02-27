@@ -16,10 +16,11 @@ angular.module('userController',['userServices'])
              text: "Ocorreu tudo bem ao cadastrar o novo usuário.",
              type: "success",
              timer: 3000,
-             icon: "success"
+             icon: "success",
+             buttons: false
           });
           $timeout(function(){
-            $location.path('/#!');
+            $location.path('/');
           },3000);
         }else{
           swal({

@@ -3,7 +3,7 @@ angular.module('mainController', ['autenticarServices'])
 .controller('mainCtrl', function(Autenticar, $timeout, $location, $rootScope, $window){
 
     var app = this;
-    
+
     //serve para que primeiro se carregue todo a HTML, para depois exibir o angular
     app.loadme = false;
 
@@ -40,7 +40,8 @@ angular.module('mainController', ['autenticarServices'])
              text: "Você está sendo redirecionado ao sistema!",
              type: "success",
              timer: 1500,
-             icon: "success"
+             icon: "success",
+             buttons: false
           });
           //Redireciona para a página incial com timeout
           $timeout(function(){
@@ -77,7 +78,8 @@ angular.module('mainController', ['autenticarServices'])
       if (willDelete) {
         swal("Você foi desconectado!", {
           icon: "success",
-          timer: 1900
+          timer: 1900,
+          buttons: false          
         });
         Autenticar.logout();
         $timeout(function(){
