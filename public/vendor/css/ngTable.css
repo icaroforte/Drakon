@@ -114,7 +114,7 @@
 
 .ng-table-pagination {
   margin-top: 0; }
-  
+
 .ng-table-group-selector:before,
 .ng-table-group-selector:after,
 .filter:before,
@@ -182,3 +182,36 @@
     padding: 0px; } }
 
 /*# sourceMappingURL=ng-table.css.map*/
+
+.htable {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 0 auto 0 auto;
+
+}
+.htable tr, th, td {
+    border: 1px solid black;
+    width: 100px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+
+}
+.ctable {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 0 auto 0 auto;
+}
+.hidden {
+   width: 0;
+    opacity: 0;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}

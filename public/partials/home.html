@@ -1,4 +1,6 @@
 <script src="vendor/js/fnExcelReport.js"></script>
+<script src="vendor/js/dragtable.js"></script>
+
 <div class="card mb-3">
   <div class="card-body">
     <img id="printBtn" align="right" border="0" src="vendor/images/print_icon.png" width="30" height="30" ng-click="entorpecente.imprimirTabela();">
@@ -9,9 +11,9 @@
 </div>
 
 <!--<table id="example" class="table table-bordered table-striped display table-hover" style="width:100%"> -->
-  <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover" show-filter="true" id="entorpecenteTabela">
+  <table ng-table="entorpecente.tableParams" class="table table-bordered table-striped table-hover draggable" show-filter="true" id="entorpecenteTabela">
     <tr ng-repeat="item in $data" ng-click="entorpecente.linkedTable(item);">
-      <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia'">
+      <td title="'Delegacia'" filter="{ delegacia: 'text'}" sortable="'delegacia' ">
           {{item.delegacia}}</td>
       <td title="'Proced'" filter="{ procedimento: 'text'}" sortable="'procedimento'">
           {{item.procedimento}}</td>
@@ -50,7 +52,6 @@
 
     </tr>
 
-
   </table>
 
   <script src="vendor/js/tabletoCSV.js"></script>
@@ -62,3 +63,16 @@
             });
         });
     </script>
+
+<!-- Habilitar resize das colunas da tabela
+    <script>
+      $(function(){
+
+        var onSampleResized = function(e){
+          var table = $(e.currentTarget); //reference to the resized table
+        };
+
+        $("#entorpecenteTabela").colResizable({resizeMode:'flex'});
+      });
+    </script>
+    -->
