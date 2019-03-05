@@ -21,6 +21,10 @@ background-color: rgba(0,0,0,0.5) !important;
 color: white;
 }
 
+.table{
+  border:2px solid black;
+}
+
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
