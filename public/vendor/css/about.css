@@ -21,7 +21,11 @@ body{
 /* Add some shadows to create a card effect */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 290px;
+  text-align: justify;
+  text-justify: inter-word;
 }
+
 
 /* Some left and right padding inside the container */
 .container {
@@ -40,18 +44,48 @@ body{
   color: grey;
 }
 
-img {
-    width: 250px;
+.image-about{
+  width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-team {
+    width: 230px;
     height: 250px;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+.image-dre{
+  width: 430px;
+  height: 450px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-container{
+  width: 850px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header{
   font-size: 60px;
   text-align: center;
   color: #505050;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+}
+
+.subHeader{
+  font-size:22px;
+  text-align: center;
+  margin-left: auto;
+  margin-top: -30px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .row{
   margin: auto;
