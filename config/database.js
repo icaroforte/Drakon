@@ -1,5 +1,10 @@
 var mongoose = require('mongoose');
 
+/*
+ Conexao com o banco de dados utilizado da aplicacao e log exibido no console, o mongo DB.
+*/
+
+
 module.exports = function(uri) {
 	mongoose.connect(uri,
 		{
