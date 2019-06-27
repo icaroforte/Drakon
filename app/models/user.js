@@ -2,6 +2,20 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 
+/*
+ Modelo de objeto usuario para o sistema
+ 
+ #API
+
+ 
+ @class User.
+ @param username?: String - O userName do usuario a ser cadastrado. Deve ser unico. Sera utilizado quando o usuario fizer login
+ @param password?: String - Senha do usuario a ser cadastrado.
+ @param email?: String - O email do usuario a ser cadastrado. Deve ser unico.
+
+
+*/
+
 var UserSchema = new Schema({
   username: {
     type: String,
@@ -22,6 +36,16 @@ var UserSchema = new Schema({
     unique: true
   }
 });
+
+/*
+
+@method
+
+API
+
+metodo para gravacao do usuario
+
+*/
 
 UserSchema.pre('save', function(next){
   var user = this;
