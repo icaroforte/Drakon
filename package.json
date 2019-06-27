@@ -1,7 +1,7 @@
 {
-  "name": "mean-example",
-  "version": "1.0.0",
-  "description": "MEAN-Stack Example",
+  "name": "drakon",
+  "version": "1.0.5",
+  "description": "Aplicacao MEAN stack para catalogar e gerenciar entorpecentes apreendidos na policia civil - Campina Grande, Paraiba",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
