@@ -25,7 +25,11 @@ var Schema = mongoose.Schema;
 	@param caixa?: string - A caixa onde a droga está armazenada.
 	@param oficio?: string - O ofício emitido para o entorpecente.
 	@param delegacia?: string - De qual delegacia veio o entorpecente.
-	
+	@param autorizacao?: string - Autorizacao para incineracao.
+	@param data_apreensao?: string - Data da apreensao do entorpecente.
+	@param local_apreensao?: string - Local de apreensao da droga.
+	@param incinerado?: string - Se o entorpecente ja foi incinerado.
+
 	```
 
 */
