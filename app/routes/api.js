@@ -1,9 +1,24 @@
-//Deveria tá sendo usado no controller
 var User = require('../models/user');
 var Entorpecente = require('../models/entorpecente');
 var jwt = require('jsonwebtoken');
 //Secret a titulo de teste da aplicação
 var secret = 'algaroba';
+
+//#################################################################################\\
+
+/*
+ Modulo responsavel por identificar as rotas da aplicacao.
+ 
+ / - rota que leva para a pagina home.
+ /about - rota que leva para a pagina sobre - que fornece informacoes sobre a DEGEPOL, a aplicacao, e a equipe de desenvolvimento.
+ /register - rota que leva para a pagina de cadastro de usuarios.
+ /login - rota que leva para a pagina de login do usuario, esta deve sempre aparecer antes que o usuario entre na aplicacao.
+ /logout - rota que desconecta o usuario do sistema.
+ /profile - rota que leva para a pagina perfil. Nela ha informacoes sobre nome e email do usuario
+ /cadastroentorpecente - rota que leva para a pagina onde o usuario cadastra novos entorpecentes
+ /editarentorpecente - rota que leva para a pagina onde entorpecentes ja cadastrados, podem ser editados.
+
+*/
 
 //ROTAS
 //################################## API Usuários ####################################\\
